@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/75e5e37bf8.js" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: sans-serif;
+        }
+
+        .bg-container {
+            background-color: rgb(246, 247, 249);
+            padding: 40px;
+        }
+
+        .navbar-bg {
+            padding: 25px;
+            background-color: white;
+            border-radius: 8px;
+            margin: auto;
+        }
+
+        .logo {
+            width: 7rem;
+        }
+
+        .nav-items {
+            color: gray;
+            font-size: large;
+            margin-right: 3rem;
+            font-weight: 500;
+            font-family: cursive;
+
+        }
+
+        .photo {
+            border-radius: 100%;
+            height: 350px;
+            margin-top: 3rem;
+        }
+
+        .home-section-heading {
+            font-size: 2.7rem;
+            margin-top: 3rem;
+            text-align: left;
+            font-weight: bold;
+            letter-spacing: .6px;
+        }
+
+        .home-section-description {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            text-align: left;
+            letter-spacing: .4px;
+            color: gray;
+        }
+
+        .btn {
+            height: 50px;
+            width: auto;
+            border-radius: 2rem;
+            padding-left: 1.2rem;
+            padding-right: 1.2rem;
+            font-size: large;
+        }
+
+        .home-btn1 {
+            background-color: rgb(209, 107, 134);
+            color: white;
+            font-weight: bold;
+            margin-right: 10px;
+            transition: margin-top .2s;
+        }
+
+        .home-btn2 {
+            color: rgb(209, 107, 134);
+            border: solid rgb(209, 107, 134);
+            font-weight: bold;
+            border-width: 2px;
+            margin-left: 10px;
+            transition: margin-top .2s;
+
+        }
+
+        .home-btn1:hover {
+            color: white;
+            margin-top: -10px;
+
+        }
+
+        .home-btn2:hover {
+            color: rgb(209, 107, 134);
+            margin-top: -10px;
+
+        }
+
+        .what-i-do-heading {
+            font-size: 2.5rem;
+            margin-top: 3rem;
+            text-align: left;
+            font-weight: 500;
+            letter-spacing: .6px;
+        }
+
+        .what-i-do-description {
+            font-size: 1.3rem;
+            margin-top: 1rem;
+            text-align: left;
+            letter-spacing: .4px;
+            color: gray;
+        }
+
+        .skills-section {
+            margin-top: 7rem;
+        }
+
+        .skills-progress {
+            margin-top: 3rem;
+        }
+
+        .skills-heading {
+            font-size: 20px;
+            color: rgb(209, 107, 134);
+            font-weight: bold;
+        }
+
+        .skill {
+            margin-top: 1rem;
+        }
+
+        .skill-percent {
+            margin-top: -40px;
+            text-align: right;
+        }
+
+        .progress-bg {
+            width: 100%;
+            border-radius: 2rem;
+            background-color: rgb(222, 222, 222);
+            height: .5rem;
+        }
+
+        .progress {
+            height: .5rem;
+        }
+
+        .html-progress {
+            width: 100%;
+            background-image: linear-gradient(to right,white,rgb(209, 107, 134));
+        }
+
+        .css-progress {
+            width: 90%;
+            background-image: linear-gradient(to right,white,rgb(209, 107, 134));
+                }
+
+        .js-progress {
+            width: 75%;
+            background-image: linear-gradient(to right,white,rgb(209, 107, 134));        
+        }
+
+        .c-progress {
+            width: 90%;
+            background-image: linear-gradient(to right,white,rgb(209, 107, 134));        
+        }
+
+        .skill-logo {
+            height: 7rem;
+            width: 7rem;
+        }
+
+        .extra-skills-section {
+            padding-bottom: 1rem;
+            margin-top: 3rem;
+        }
+        .projects-section{
+            margin-top: 5rem;
+        }
+        .skill-logo-container {
+            padding-left: 9.5rem;
+            margin-bottom: 3rem;
+        }
+
+        .skill-para {
+            font-size: 18px;
+            color: gray;
+        }
+
+        .projects-section-heading {
+            font-size: 2.3rem;
+            font-weight: 500;
+            letter-spacing: .6px;
+        }
+
+        .projects-section-description {
+            font-size: 23px;
+            color: gray;
+            padding-top: .5rem;
+        }
+
+        .projects-section-button {
+            height: 50px;
+            width: auto;
+            border-radius: 2rem;
+            padding-left: 1.3rem;
+            padding-right: 1.3rem;
+            font-size: large;
+            border-style: solid;
+            border-color: rgb(209, 107, 134);
+            border-width: 3px;
+            color: rgb(209, 107, 134);
+            font-weight: 700;
+            transition: margin-top .4s;
+
+            margin-top: 10px;
+        }
+
+        .projects-section-button:hover {
+            background-color: rgb(209, 107, 134);
+            color: white;
+            margin-top: -.5px;
+
+        }
+
+        .project-bg {
+            padding: 1.5rem;
+            border-radius: 1rem;
+            margin-top: 3rem;
+        }
+        .project1-bg{
+            background-color: rgb(241, 255, 255);
+        }
+        .project-heading {
+            font-size: 15px;
+        }
+        .project1-heading{
+            color: rgb(132, 209, 209);
+        }
+        .project-name {
+            font-size: 30px;
+        }
+        .project-description {
+            font-size: 18px;
+            color: black;
+            margin-top: 2rem;
+        }
+        .project1-img1 {
+            width: 80%;
+            margin-left: 10%;
+
+        }
+        .project1-img2 {
+            width: 100%;
+        }
+        .project2-bg{
+            background-color: rgb(235, 244, 255);
+        }
+        .project2-heading{
+            color: rgb(136, 176, 225);
+        }
+        .project2-img1{
+            width: 100%;
+            border-radius: 5px;
+        }
+        .project2-img2{
+            width: 60%;
+            margin-top: -40px;
+            border-radius: 5px;
+            margin-left: 20%;
+        }
+        .project3-bg{
+            background-color: rgb(255, 247, 237);
+        }
+        .project3-heading{
+            color: rgb(204, 158, 93);
+        }
+        .project3-img1{
+            width: 80%;
+            margin-left: 10%;
+        }
+        .project3-img2{
+            width: 100%;
+        }
+        .project3-img3{
+            width: 80%;
+            margin-left: 10%;
+        }
+        .project-link{
+            color: rgb(209, 107, 134);
+        }
+        .project-link:hover{
+            color: rgb(209, 107, 134);
+            text-decoration: none;
+        }
+        .link-arrow{
+            color: rgb(209, 107, 134);
+        }
+        .contact-us-section{
+            background-color: white;
+            padding: 3rem;
+            margin-top: 3rem;
+            border-radius: 1rem;
+        }
+        .contact-us-description{
+            font-size: 20px;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <!--Nav bar section -->
+    <div class="bg-container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light navbar-bg shadow">
+            <div>
+                <img src="logo.png" alt="logo" class="logo">
+            </div>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ml-auto">
+                    <a class="navbar-brand nav-items" href="#homeSection">Home</a>
+                    <a class="navbar-brand nav-items" href="#skillSection">Skills</a>
+                    <a class="navbar-brand nav-items" href="#projectSection">Projects</a>
+                    <a class="navbar-brand nav-items" href="#contactUsSection">Contact</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container home-section" id="homeSection">
+            <div class="row">
+                <div class="col-12 col-md-6 photo-container d-flex flex-row justify-content-center">
+                    <img src="Photo.jpg" alt="photo" class="photo shadow-lg" />
+                </div>
+                <div class="col-12 col-md-6">
+                    <h1 class="home-section-heading ">I'm a Full Stack Web Developer</h1>
+                    <p class="home-section-description ">Hello! I'm Deepika Vaddem, a passionate third-year B.Tech
+                        student With a strong passion for web
+                        development, I am a seasoned full stack web developer with expertise in crafting dynamic and
+                        responsive web applications, My passion lies in transforming ideas into functional,
+                        user-friendly solutions.</p>
+                    <button class="home-btn1 btn">Download Resume</button>
+                    <a href="#contactUsSection"><button class="home-btn2 btn">Contact Me</button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="conatiner skills-section" id="skillSection">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="what-i-do-section">
+                        <h1 class="what-i-do-heading">What I Do?</h1>
+                        <p class="what-i-do-description">Bringing ideas to life by seamlessly integrating front-end and
+                            back-end technologies. Crafting creative and efficient solutions to address complex problems
+                            in web development. Focusing on creating intuitive and visually appealing interfaces to
+                            enhance user experiences. Identifying and resolving technical challenges to ensure smooth
+                            functionality.</p>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 skills-progress">
+                    <h3 class="skills-heading">SKILLS</h3>
+                    <div class="skills-container">
+                        <p class="skill">HTML</p>
+                        <p class="skill-percent">100%</p>
+                        <div class="progress-bg">
+                            <div class="html-progress progress"></div>
+                        </div>
+
+                        <p class="skill">CSS</p>
+                        <p class="skill-percent">90%</p>
+                        <div class="progress-bg">
+                            <div class="css-progress progress"></div>
+                        </div>
+
+                        <p class="skill">JAVA SCRIPT</p>
+                        <p class="skill-percent">75%</p>
+                        <div class="progress-bg">
+                            <div class="js-progress progress"></div>
+                        </div>
+
+                        <p class="skill">C PROGRAMMING</p>
+                        <p class="skill-percent">90%</p>
+                        <div class="progress-bg">
+                            <div class="c-progress progress"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row extra-skills-section">
+                    <div class=" col-12 col-md-3 skill-logo-container">
+                        <i class="fa-brands fa-python fa-7x" style="color: #146ebe;"></i>
+                        <p class=" mt-4 ml-1 skill-para">Intermediate</p>
+                    </div>
+                    <div class="col-12 col-md-3 skill-logo-container">
+                        <i class="fa-brands fa-java fa-7x" style="color: #ffab40;"></i>
+                        <p class="mt-4 ml-1 skill-para">Intermediate</p>
+                    </div>
+                    <div class="col-12 col-md-3 skill-logo-container">
+                        <i class="fa-brands fa-react fa-7x skill-logo" style="color: #000000;"></i>
+                        <p class=" mt-4 ml-4 skill-para">Beginner</p>
+                    </div>
+                    <div class="col-12 col-md-3 skill-logo-container">
+                        <i class="fa-brands fa-bootstrap fa-7x" style="color: #8311fa;"></i>
+                        <p class=" mt-4 ml-4 skill-para">Advanced</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <hr>
+        <div class="container projects-section" id="projectSection">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <h1 class="projects-section-heading">Latest Projects</h1>
+                    <p class="projects-section-description">Check out some of my latest projects</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-row justify-content-end">
+                    <a href="https://github.com/DeepikaVaddem"><button class="projects-section-button">See All Projects</button></a>
+                </div>
+            </div>
+            <div class="project-bg project1-bg row shadow">
+                <div class="col-12 col-md-6">
+                    <p class="project-heading project1-heading">PROJECT 1</p>
+                    <h3 class="project-name">SIMPLE CALCULATOR</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                        voluptate ipsam reiciendis ullam perspiciatis commodi vero quod illum, fuga expedita qui illo
+                        tenetur perferendis id provident debitis maxime quis eaque libero omnis officia ipsa suscipit
+                        modi vel. Reprehenderit eaque tempora officia suscipit commodi veniam, voluptatem nam labore!
+                        Placeat, consequatur! Placeat?</p>
+                    <a href="https://deepikavaddem.github.io/Calculator/" class="project-link">See Project</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right link-arrow" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                    </svg>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+                    <img src="cal2.png" class="project1-img1">
+                    <img src="cal1.png" class="project1-img2">
+                </div>
+            </div>
+
+            <div class="project-bg project2-bg row shadow">
+                <div class="col-12 col-md-6 order-1 order-md-2">
+                    <p class="project-heading project2-heading">PROJECT 2</p>
+                    <h3 class="project-name">GUESS A NUMBER GAME !</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                        voluptate ipsam reiciendis ullam perspiciatis commodi vero quod illum, fuga expedita qui illo
+                        tenetur perferendis id provident debitis maxime quis eaque libero omnis officia ipsa suscipit
+                        modi vel. Reprehenderit eaque tempora officia suscipit commodi veniam, voluptatem nam labore!
+                        Placeat, consequatur! Placeat?</p>
+                    <a href="https://deepikavaddem.github.io/Guess-a-number-game/" class="project-link">See Project</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right link-arrow" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+
+                </div>
+                <div class="col-12 col-md-6 order-2 order-md-1 mt-3">
+                    <img src="game.png" class="project2-img1">
+                    <img src="game2.png" class="project2-img2">
+                </div>
+            </div>
+
+            <div class="project-bg project3-bg row shadow">
+                <div class="col-12 col-md-6">
+                    <p class="project-heading project3-heading">PROJECT 3</p>
+                    <h3 class="project-name">RESTAURANT WEBSITE</h3>
+                    <p class="project-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum
+                        voluptate ipsam reiciendis ullam perspiciatis commodi vero quod illum, fuga expedita qui illo
+                        tenetur perferendis id provident debitis maxime quis eaque libero omnis officia ipsa suscipit
+                        modi vel. Reprehenderit eaque tempora officia suscipit commodi veniam, voluptatem nam labore!
+                        Placeat, consequatur! Placeat?</p>
+                    <a href="https://deepikavaddem.github.io/Foodmunch/" class="project-link">See Project</a>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right link-arrow" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z"/>
+                      </svg>
+                </div>
+                <div class="col-12 col-md-6 mt-3">
+                   <img src="restaurant1.png" class="project3-img1">
+                   <img src="restaurant2.png" class="project3-img2">
+                   <img src="restaurant3.png" class="project3-img3">
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="contact-us-section row shadow" id="contactUsSection">
+                <div class="col-12 col-md-6">
+                    <i class="fa-solid fa-envelope fa-3x" style="color: rgb(209, 107, 134);"></i>
+                    <h1 class="mt-3 contact-us-heading">You can find me on</h1>
+                    <p class="mt-3 contact-us-description">Whether you have a project idea, want to discuss collaboration opportunities, or simply want to say hello, I'd love to hear from you. Feel free to drop me a message. Additionally, I'm active on social platforms, so let's connect there too!</p>
+                </div>
+                <div class="col-12 col-md-6 d-flex flex-row justify-content-center mt-5">
+                    <a href="https://www.linkedin.com/in/vaddam-deepika-187345243/"><i class="fa-brands fa-linkedin fa-2x m-3" style="color: gray;"></i></a>
+                    <a href=""><i class="fa-brands fa-square-instagram fa-2x m-3" style="color: gray;"></i></a>
+                    <a href="https://github.com/DeepikaVaddem"><i class="fa-brands fa-github fa-2x m-3" style="color: gray;"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
